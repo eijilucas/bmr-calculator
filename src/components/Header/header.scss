@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    background: var(--color-blue-gradient);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+
+    .navigation {
+        display: flex;
+        gap: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    @media(max-width:768px) {
+        .navigation {
+            display: none;
+        }
+    }
+}
+
