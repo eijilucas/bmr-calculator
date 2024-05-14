@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# BMR Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+>Status: Completed
 
-Currently, two official plugins are available:
+## Description
+It's a simple Basal Metabolism Rate application to calculate your macronutrients in diets based on BMR(Basal Metabolism Rate) and your DCR(Daily Calorie Requirement)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Functionality
+This application calculates your BMR and DCR ratios
+1. The user provides your age, weight, height and gender
+2. The application returns the results on the screen
 
-## Expanding the ESLint configuration
+## Requirements 
+- Any browser that supports JavaScript
+- For devs need to have Node.js v18.12+ installed
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## How to use
+Acess the website
+```bash
+https://bmr-calculator-eight.vercel.app
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Provide your informations like the following:
+```bash
+age: 29
+weight(kg): 88
+height(cm): 170
+```
+
+Lastly, click on the button to obtain your ratios
+
+## Installation Instructions
+
+```bash
+git clone https://github.com/eijilucas/bmr-calculator
+
+cd bmr-calculator
+
+npm install
+```
+
+```bash
+npm run dev
+```
+
+
+
