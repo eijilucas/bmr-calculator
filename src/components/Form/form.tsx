@@ -6,25 +6,28 @@ export default function Form() {
   const [gender, setGender] = useState("");
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
-  const [result, setResult] = useState(0);
+  const [resultBmr, setResultBmr] = useState(0);
+  const [resultNcd, setResultNcd] = useState(0);
 
   const handleForm = (event: React.FormEvent) => {
     event.preventDefault();
 
     if (gender === "male") {
-      const bmr = 66 + 13.7 * weight + 5 * height - 6.8 * age;
-      return setResult(bmr);
+      const bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
+      const ncd = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+      setResultBmr(bmr);  
+      setResultNcd(ncd);
     } else if (gender === "female") {
-      const bmr = 655 + 9.6 * weight + 1.8 * height - 4.7 * age;
-      return setResult(bmr);
-    } else {
-      return alert("Please select a gender");
+      const bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+      const ncd = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+      setResultBmr(bmr);
+      setResultNcd(ncd);
     }
   };
 
   return (
     <form onSubmit={handleForm} className="form">
-      <h1>Preencha as informações</h1>
+      <h2>Preencha as informações</h2>
 
       <div className="inputs">
         <div className="info">
@@ -90,12 +93,41 @@ export default function Form() {
 
       <button type="submit">Calcular</button>
 
-      <span>
-        Sua taxa de metabolismo basal é:
-        <br/> 
-        <input type="text" disabled value={result} className="result" />
+      <span className="results">
+        <h3>TMB - Taxa de Metabolismo Basal</h3>
+        <br/>
+        Sua taxa de metabolismo basal aproximado é:
+        <br/>
+        <input type="text" disabled value={resultBmr.toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
       </span>
 
+      <span className="results">
+        <h3>NCD - Necessidade de Calorias Diárias</h3>
+        <br/>
+        NCD - <strong>Sedentário</strong>(Pouco ou nenhum exercício):
+        <br/>
+        <input type="text" disabled value={(resultNcd*1.25).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
+        <br/>
+        <br/>
+        NCD - <strong>Levemente ativo</strong>(exercício leve 1-3 dias/semana):
+        <br/>
+        <input type="text" disabled value={(resultNcd*1.375).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
+        <br/>
+        <br/>
+        NCD - <strong>Moderadamente ativo</strong>(exercício moderado 3-5 dias/semana):
+        <br/>
+        <input type="text" disabled value={(resultNcd*1.55).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
+        <br/>
+        <br/>
+        NCD - <strong>Muito ativo</strong>(exercício intenso 6-7 dias/semana):
+        <br/>
+        <input type="text" disabled value={(resultNcd*1.725).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
+        <br/>
+        <br/>
+        NCD - <strong>Extremamente ativo</strong>(exercício muito intenso e trabalho físico):
+        <br/>
+        <input type="text" disabled value={(resultNcd*1.9).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
+      </span>
 
     </form>
   );
