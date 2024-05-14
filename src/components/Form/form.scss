@@ -45,6 +45,10 @@
 
 @media(max-width: 768px) {
 
+    input:focus {
+        pointer-events: none;
+    }
+
     .title {
         text-align: center;
     }
