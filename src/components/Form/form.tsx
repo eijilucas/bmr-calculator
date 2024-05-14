@@ -27,7 +27,7 @@ export default function Form() {
 
   return (
     <form onSubmit={handleForm} className="form">
-      <h2>Preencha as informações</h2>
+      <h2 className="title">Preencha as informações</h2>
 
       <div className="inputs">
         <div className="info">
