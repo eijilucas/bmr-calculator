@@ -104,27 +104,27 @@ export default function Form() {
       <span className="results">
         <h3>NCD - Necessidade de Calorias Diárias</h3>
         <br/>
-        NCD - <strong>Sedentário</strong>(Pouco ou nenhum exercício):
+        NCD - <strong>Sedentário</strong>(Pouco ou nenhum exercício (1.2)):
         <br/>
         <input type="text" disabled value={(resultNcd*1.25).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
         <br/>
         <br/>
-        NCD - <strong>Levemente ativo</strong>(exercício leve 1-3 dias/semana):
+        NCD - <strong>Levemente ativo</strong>(exercício leve 1-3 dias/semana (1.3)):
         <br/>
         <input type="text" disabled value={(resultNcd*1.375).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
         <br/>
         <br/>
-        NCD - <strong>Moderadamente ativo</strong>(exercício moderado 3-5 dias/semana):
+        NCD - <strong>Moderadamente ativo</strong>(exercício moderado 3-5 dias/semana (1.5)):
         <br/>
         <input type="text" disabled value={(resultNcd*1.55).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
         <br/>
         <br/>
-        NCD - <strong>Muito ativo</strong>(exercício intenso 6-7 dias/semana):
+        NCD - <strong>Muito ativo</strong>(exercício intenso 6-7 dias/semana (1.7)):
         <br/>
         <input type="text" disabled value={(resultNcd*1.725).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
         <br/>
         <br/>
-        NCD - <strong>Extremamente ativo</strong>(exercício muito intenso e trabalho físico):
+        NCD - <strong>Extremamente ativo</strong>(exercício muito intenso e trabalho físico (1.9)):
         <br/>
         <input type="text" disabled value={(resultNcd*1.9).toLocaleString('pt-br', {minimumFractionDigits: 2}) || ""} className="result" />
       </span>
