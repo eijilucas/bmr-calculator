@@ -1,0 +1,62 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    gap: 20px;
+    padding: 20px;
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        padding: 5px;
+        text-align: center;
+        border: none;
+        background-color: #ddd;
+        outline: none;
+    }
+    
+    button {
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        background: #0047AB;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .result {
+        color: #000;
+        font-weight: 700;
+    }
+}
+
+@media(max-width: 768px) {
+    .form {
+        align-items: center;
+        text-align: center;
+    }
+
+    .radio {
+        display: flex;
+    }
+
+    .inputs, input {
+        width: 100%;
+    } 
+
+    button {
+        width: 100%;
+    }
+}

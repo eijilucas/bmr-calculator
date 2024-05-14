@@ -10,3 +10,7 @@
 :root {
     --color-blue-gradient: linear-gradient(to right, #373b44, #4286f4);
 }
+
+body {
+    background-color: #f2f2f2;
+}
