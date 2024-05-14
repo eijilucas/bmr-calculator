@@ -53,9 +53,14 @@
         text-align: center;
     }
 
-    .radio {
+    .radio-btns {
         display: flex;
         align-items: flex-start;
+    }
+
+    .radio {
+        display: flex;
+        align-items: center;
     }
 
     .inputs, input {
