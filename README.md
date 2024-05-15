@@ -15,7 +15,7 @@ This application calculates your BMR and DCR ratios
 - For devs need to have Node.js v18.12+ installed
 
 ## How to use
-Acess the website
+Access the website
 ```bash
 https://bmr-calculator-eight.vercel.app
 ```
